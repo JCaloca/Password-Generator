@@ -1,13 +1,30 @@
 // Assignment Code
 
-// Create var's for: length (min 8 max 128), lowercase, uppercase, numeric, and/or special characters 
-var charLength = ;
-var lowerChar
-var upperChar
-var numerChar
-var specialChar
+// Define different character types as strings
+var lowerchars = "abcdefghijklmnopqrstuvwxyz";
+var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberChars = "0123456789";
+var specialChars = "!@#$%^&*()<>[]{}";
 
+var length = 0;
+var confirmSpecialChar;
+var confirmNumericChar;
+var confirmUpperChar;
+var confirmLowerChar;
+
+var possibleChars = "";
+var rPassword = "";
+
+//Make function to prompt user on length, lowercase, uppercase, numeric, and/or special characters
 var generateBtn = document.querySelector("#generate");
+function generatePassword() {
+  // Prompt to choose length of password and define its minimum and maximum
+  length = parseInt(window.prompt("Give password length between 8 and 128"));
+  if (length < 8 || length > 128) {
+    window.alert("Password length must be between 8 and 128. Please repeat");
+    return "Password not generated.";
+  }
+
 
 // Write password to the #password input
 function writePassword() {
@@ -20,5 +37,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-generateBtn = prompt("How many characters would you like in your password? 8-128")
