@@ -13,7 +13,7 @@ var confirmUpperChar;
 var confirmLowerChar;
 
 var possibleChars = "";
-var rPassword = "";
+var newPassword = "";
 
 //Make function to prompt user on length, lowercase, uppercase, numeric, and/or special characters
 var generateBtn = document.querySelector("#generate");
@@ -54,6 +54,27 @@ function generatePassword() {
     possibleChars = possibleChars + specialChars;
   }
   console.log("Possible characters = ", possibleChars);
+
+  // Check to see if at least one character type is used by user.
+  if (
+    confirmLowerChar === false &&
+    confirmUpperChar === false &&
+    confirmNumericChar === false &&
+    confirmSpecialChar === false
+  ) {
+    window.alert(
+      "At least one character type must be chosen. Please try again."
+    );
+
+    return "Password not generated.";
+  }
+
+  for (i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * possibleChars.length);
+    newPassword += possibleChars[randomIndex];
+  }
+
+  return newPassword;
 }
 
 // Write password to the #password input
