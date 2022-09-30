@@ -68,7 +68,7 @@ function generatePassword() {
 
     return "Password not generated.";
   }
-
+  //Random selection function
   for (i = 0; i < length; i++) {
     let randomIndex = Math.floor(Math.random() * possibleChars.length);
     newPassword += possibleChars[randomIndex];
