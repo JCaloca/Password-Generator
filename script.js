@@ -25,6 +25,36 @@ function generatePassword() {
     return "Password not generated.";
   }
 
+  //Prompt to choose different character types to be included
+  confirmLowerChar = window.confirm(
+    "Press ok to add lowercase characters to password. Otherwise press cancel."
+  );
+  if (confirmLowerChar) {
+    possibleChars = possibleChars + lowerchars;
+  }
+
+  confirmUpperChar = window.confirm(
+    "Press ok to add uppercase characters to password. Otherwise press cancel."
+  );
+  if (confirmUpperChar) {
+    possibleChars = possibleChars + upperChars;
+  }
+
+  confirmNumericChar = window.confirm(
+    "Press ok to add numeric characters to password. Otherwise press cancel."
+  );
+  if (confirmNumericChar) {
+    possibleChars = possibleChars + numberChars;
+  }
+
+  confirmSpecialChar = window.confirm(
+    "Press ok to add special characters to password. Otherwise press cancel."
+  );
+  if (confirmSpecialChar) {
+    possibleChars = possibleChars + specialChars;
+  }
+  console.log("Possible characters = ", possibleChars);
+}
 
 // Write password to the #password input
 function writePassword() {
