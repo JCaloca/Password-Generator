@@ -10,6 +10,8 @@ Use this page to generate a random password.
 
 ![The following is a screenshot of the application.](/assets/random-password-screenshot.jpg)
 
+To see the website click [here](https://jcaloca.github.io/Password-Generator/)
+
 ## Credits
 
 Thanks to my classmates and tutor.
