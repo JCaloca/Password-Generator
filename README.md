@@ -6,6 +6,8 @@ The purpose of this application is as the title says generate a password. The us
 
 ## Usage
 
+Use this page to generate a random password.
+
 ![The following is a screenshot of the application.](/assets/random-password-screenshot.jpg)
 
 ## Credits
